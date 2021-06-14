@@ -34,8 +34,10 @@ struct ICMPHeader {
 #define ICMP_TYPE_ECHO_REQUEST 8
 
 #define CONN_STATE_KO 0
-#define CONN_STATE_SLOW 1
-#define CONN_STATE_OK 2
+#define CONN_STATE_BAD 1
+#define CONN_STATE_SLOW 2
+#define CONN_STATE_REDUCED 3
+#define CONN_STATE_OK 4
 
 /* This is the standard BSD checksum code, modified to use modern types. */
 static uint16_t in_cksum(const void *buffer, size_t bufferLen)
@@ -185,18 +187,24 @@ int64_t ustime(void) {
     [myMenu addItem: openAtStartupMenuItem];
     [myMenu addItem: menuItem];
 
-    myStatusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+    myStatusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
     
-    myStatusImageOK = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"iconok" ofType:@"png"]];
-    myStatusImageSLOW = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"iconslow" ofType:@"png"]];
-    myStatusImageKO = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"iconko" ofType:@"png"]];
-    [myStatusItem setImage:myStatusImageKO];
+    myStatusImageKO = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"signal-0" ofType:@"png"]];
+    myStatusImageBAD = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"signal-1" ofType:@"png"]];
+    myStatusImageSLOW = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"signal-2" ofType:@"png"]];
+    myStatusImageREDUCED = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"signal-3" ofType:@"png"]];
+    myStatusImageOK = [[NSImage alloc] initWithContentsOfFile: [bundle pathForResource:@"signal-4" ofType:@"png"]];
+    
+    [myStatusItem setImage:myStatusImageBAD];
     [myStatusItem setMenu: myMenu];
     [self changeConnectionState: CONN_STATE_KO];
     
     icmp_socket = -1;
     last_received_time = 0;
     last_rtt = 0;
+    
+    srandom((unsigned int) time(NULL));
+    
     icmp_id = random()&0xffff;
     icmp_seq = random()&0xffff;
 }
@@ -219,10 +227,14 @@ int64_t ustime(void) {
     elapsed = (ustime() - last_received_time)/1000; /* in milliseconds */
     if (elapsed > 3000) {
         state = CONN_STATE_KO;
-    } else if (last_rtt < 300) {
+    } else if (last_rtt < 100) {
         state = CONN_STATE_OK;
-    } else {
+    } else if (last_rtt < 300) {
+        state = CONN_STATE_REDUCED;
+    } else if (last_rtt < 900) {
         state = CONN_STATE_SLOW;
+    } else {
+        state = CONN_STATE_BAD;
     }
     if (state != connection_state) {
         [self changeConnectionState: state];
@@ -237,10 +249,16 @@ int64_t ustime(void) {
     } else if (state == CONN_STATE_OK) {
         [myStatusItem setImage:myStatusImageOK];
         [statusMenuItem setTitle:@"Connection OK"];
+    } else if (state == CONN_STATE_REDUCED) {
+        [myStatusItem setImage:myStatusImageREDUCED];
+        [statusMenuItem setTitle:@"Connection is reduced"];
     } else if (state == CONN_STATE_SLOW) {
-        [myStatusItem setImage:myStatusImageSLOW];
-        [statusMenuItem setTitle:@"Connection is slow"];
-    }
+       [myStatusItem setImage:myStatusImageSLOW];
+       [statusMenuItem setTitle:@"Connection is slow"];
+   } else if (state == CONN_STATE_BAD) {
+       [myStatusItem setImage:myStatusImageBAD];
+       [statusMenuItem setTitle:@"Connection is bad"];
+   }
     connection_state = state;
 }
 
@@ -353,7 +371,7 @@ int64_t ustime(void) {
 
 - (BOOL)toggleLoginItem {
 	NSString * appPath = [[NSBundle mainBundle] bundlePath];
-    BOOL retval;
+    BOOL retval = NO;
 	
 	// Create a reference to the shared file list.
 	LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);

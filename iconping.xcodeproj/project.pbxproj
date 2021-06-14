@@ -13,11 +13,13 @@
 		B6869BB013DD8DDE00F2D69B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B6869BAE13DD8DDE00F2D69B /* Credits.rtf */; };
 		B6869BB313DD8DDE00F2D69B /* iconpingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6869BB213DD8DDE00F2D69B /* iconpingAppDelegate.m */; };
 		B6869BB613DD8DDE00F2D69B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6869BB413DD8DDE00F2D69B /* MainMenu.xib */; };
-		B6869BBD13DDA3D900F2D69B /* iconok.png in Resources */ = {isa = PBXBuildFile; fileRef = B6869BBC13DDA3D900F2D69B /* iconok.png */; };
-		B6869BBF13DDAEA600F2D69B /* iconko.png in Resources */ = {isa = PBXBuildFile; fileRef = B6869BBE13DDAEA600F2D69B /* iconko.png */; };
-		B6869BC113DDAEB500F2D69B /* iconslow.png in Resources */ = {isa = PBXBuildFile; fileRef = B6869BC013DDAEB500F2D69B /* iconslow.png */; };
 		B688E44813ED7C7A00D58F00 /* world_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B688E44713ED7C7A00D58F00 /* world_icon.png */; };
 		B688E44B13ED874400D58F00 /* world_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B688E44A13ED874400D58F00 /* world_icon.icns */; };
+		D96B0E39250351F20048D25E /* signal-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D96B0E34250351F20048D25E /* signal-1.png */; };
+		D96B0E3A250351F20048D25E /* signal-2.png in Resources */ = {isa = PBXBuildFile; fileRef = D96B0E35250351F20048D25E /* signal-2.png */; };
+		D96B0E3B250351F20048D25E /* signal-4.png in Resources */ = {isa = PBXBuildFile; fileRef = D96B0E36250351F20048D25E /* signal-4.png */; };
+		D96B0E3C250351F20048D25E /* signal-3.png in Resources */ = {isa = PBXBuildFile; fileRef = D96B0E37250351F20048D25E /* signal-3.png */; };
+		D96B0E3D250351F20048D25E /* signal-0.png in Resources */ = {isa = PBXBuildFile; fileRef = D96B0E38250351F20048D25E /* signal-0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +35,14 @@
 		B6869BAF13DD8DDE00F2D69B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		B6869BB113DD8DDE00F2D69B /* iconpingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iconpingAppDelegate.h; sourceTree = "<group>"; };
 		B6869BB213DD8DDE00F2D69B /* iconpingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iconpingAppDelegate.m; sourceTree = "<group>"; };
-		B6869BB513DD8DDE00F2D69B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B6869BBC13DDA3D900F2D69B /* iconok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconok.png; sourceTree = "<group>"; };
-		B6869BBE13DDAEA600F2D69B /* iconko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconko.png; sourceTree = "<group>"; };
-		B6869BC013DDAEB500F2D69B /* iconslow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconslow.png; sourceTree = "<group>"; };
 		B688E44713ED7C7A00D58F00 /* world_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world_icon.png; sourceTree = "<group>"; };
 		B688E44A13ED874400D58F00 /* world_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = world_icon.icns; sourceTree = "<group>"; };
+		D96B0E34250351F20048D25E /* signal-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-1.png"; sourceTree = "<group>"; };
+		D96B0E35250351F20048D25E /* signal-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-2.png"; sourceTree = "<group>"; };
+		D96B0E36250351F20048D25E /* signal-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-4.png"; sourceTree = "<group>"; };
+		D96B0E37250351F20048D25E /* signal-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-3.png"; sourceTree = "<group>"; };
+		D96B0E38250351F20048D25E /* signal-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-0.png"; sourceTree = "<group>"; };
+		D9FB62F1264C2F2100EEE650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +109,11 @@
 		B6869BA613DD8DDE00F2D69B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B6869BC013DDAEB500F2D69B /* iconslow.png */,
-				B6869BBE13DDAEA600F2D69B /* iconko.png */,
-				B6869BBC13DDA3D900F2D69B /* iconok.png */,
+				D96B0E38250351F20048D25E /* signal-0.png */,
+				D96B0E34250351F20048D25E /* signal-1.png */,
+				D96B0E35250351F20048D25E /* signal-2.png */,
+				D96B0E37250351F20048D25E /* signal-3.png */,
+				D96B0E36250351F20048D25E /* signal-4.png */,
 				B6869BA713DD8DDE00F2D69B /* iconping-Info.plist */,
 				B6869BA813DD8DDE00F2D69B /* InfoPlist.strings */,
 				B6869BAB13DD8DDE00F2D69B /* main.m */,
@@ -143,16 +149,16 @@
 		B6869B9213DD8DDD00F2D69B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Kiurma s.r.l. / Merzia s.r.l.";
 			};
 			buildConfigurationList = B6869B9513DD8DDD00F2D69B /* Build configuration list for PBXProject "iconping" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = B6869B9013DD8DDD00F2D69B;
 			productRefGroup = B6869B9C13DD8DDE00F2D69B /* Products */;
@@ -169,14 +175,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96B0E3C250351F20048D25E /* signal-3.png in Resources */,
 				B6869BAA13DD8DDE00F2D69B /* InfoPlist.strings in Resources */,
 				B6869BB013DD8DDE00F2D69B /* Credits.rtf in Resources */,
 				B6869BB613DD8DDE00F2D69B /* MainMenu.xib in Resources */,
-				B6869BBD13DDA3D900F2D69B /* iconok.png in Resources */,
-				B6869BBF13DDAEA600F2D69B /* iconko.png in Resources */,
-				B6869BC113DDAEB500F2D69B /* iconslow.png in Resources */,
+				D96B0E39250351F20048D25E /* signal-1.png in Resources */,
 				B688E44813ED7C7A00D58F00 /* world_icon.png in Resources */,
+				D96B0E3D250351F20048D25E /* signal-0.png in Resources */,
 				B688E44B13ED874400D58F00 /* world_icon.icns in Resources */,
+				D96B0E3B250351F20048D25E /* signal-4.png in Resources */,
+				D96B0E3A250351F20048D25E /* signal-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +222,7 @@
 		B6869BB413DD8DDE00F2D69B /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6869BB513DD8DDE00F2D69B /* en */,
+				D9FB62F1264C2F2100EEE650 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -227,10 +235,32 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -241,6 +271,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -253,14 +286,38 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
@@ -270,10 +327,13 @@
 		B6869BBA13DD8DDE00F2D69B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iconping/iconping-Prefix.pch";
 				INFOPLIST_FILE = "iconping/iconping-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astonmotes.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -283,10 +343,13 @@
 		B6869BBB13DD8DDE00F2D69B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iconping/iconping-Prefix.pch";
 				INFOPLIST_FILE = "iconping/iconping-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astonmotes.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
