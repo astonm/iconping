@@ -103,9 +103,12 @@ int64_t ustime(void) {
 }
 
 - (void) sendPingwithId: (int) identifier andSeq: (int) seq {
-    if (icmp_socket != -1) close(icmp_socket);
-    
-    int s = icmp_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_ICMP);
+    int s = icmp_socket;
+    if (s == -1) {
+        s = icmp_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_ICMP);
+        NSLog(@"New socket at %d", s);
+    }
+
     struct sockaddr_in sa;
     struct ICMPHeader icmp;
     
